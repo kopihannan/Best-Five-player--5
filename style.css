@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
 .background {
       background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.671), rgba(0, 0, 0, 0.774)), url(images/England-ODI-5.jpg);
         background-repeat: no-repeat;
@@ -7,3 +13,4 @@
 .banner-items{
     height: 92vh;
 }
+
