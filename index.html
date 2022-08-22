@@ -56,7 +56,7 @@
   </header>
 
   <!--------- card section  --------->
-  <section class="py-5 pl-20 pr-20 bg-stone-800">
+  <section id="card-section" class="py-5 pl-20 pr-20 bg-stone-800">
     <h1 class="text-3xl font-bold text-center text-white py-12">Select Your Favourite Player</h1>
     <div class="flex w-full pt-5">
       <div class=" w-3/4">
@@ -71,7 +71,7 @@
                 <p class="text-sm">Hundred: 20</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
                 <p class="text-sm">Hundred: 25</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@
                 <p class="text-sm">Hundred: 30</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -113,7 +113,7 @@
                 <p class="text-sm">Hundred: 26</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -127,7 +127,7 @@
                 <p class="text-sm">Hundred: 30</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -141,7 +141,7 @@
                 <p class="text-sm">Hundred: 40</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@
                 <p class="text-sm">Hundred: 40</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -169,7 +169,7 @@
                 <p class="text-sm">Hundred: 30</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -183,7 +183,7 @@
                 <p class="text-sm">Hundred: 210</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -197,7 +197,7 @@
                 <p class="text-sm">Wicktet: 200</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
@@ -211,16 +211,69 @@
                 <p class="text-sm">Wicktet: 120</p>
               </div>
               <div  class="text-center py-3">
-                <button class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
+                <button onclick="selectBtn(this)" class=" duration-500  bg-red-500 py-2 px-5 rounded-lg hover:bg-red-700"><a class="text-base text-white font-normal">Select</a></button>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class=" w-1/4">
-        <h1>2</h1>
+        <div>
+          <div class="bg-stone-100 rounded-lg ml-3" >
+            <h1 class="text-center py-5">Selected Player</h1>
+            <div class="overflow-x-auto">
+              <table class="table w-full">
+                 <thead class="text-center">
+                  <tr >
+                    <th>No:</th>
+                    <th>Name</th>
+                  </tr>
+                </thead>
+                <tbody  id="player-table" class="text-center mb-5 pb-5">
+                  <!-- <tr>
+                    <th>1</th>
+                    <td>Cy Ganderton</td>
+                  </tr> -->
+                </tbody> 
+              </table>
+            </div>
+          </div>
+        </div>
+          <div>
+            <div class="bg-stone-100 rounded-lg ml-3 mt-8" >
+              <h1 class="text-center font-semibold text-xl py-5">Players Pricing</h1>
+              <div class="overflow-x-auto">
+                  <div class="flex justify-around items-center pb-5">
+                    <h3 class="font-semibold">Per Player</h3>
+                    <input id="player-price-field" value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered input-success max-w-xs" />
+                  </div>
+                  <div class="flex justify-around items-center pb-5">
+                    <h3 class="font-semibold">Player Expenses :</h3>
+                    <h3 class="font-semibold">$15200</h3>
+                  </div>
+                  <div class="text-center pb-2"><button id="player-price" class="btn btn-outline bg-green-500 text-white">Calculate</button></div>
+                  <div>
+                    <h1 class="text-center font-semibold text-xl py-5">Others Pricing</h1>
+                    <div class="flex justify-around items-center pb-5">
+                      <h3 class="font-semibold">Coach</h3>
+                      <input value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered input-success max-w-xs" />
+                    </div>
+                    <div class="flex justify-around items-center pb-5">
+                      <h3 class="font-semibold">Manager</h3>
+                      <input value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered input-success max-w-xs" />
+                    </div>
+                    <div class="text-center pb-5"><button class="btn btn-outline bg-red-500 text-white">Calculate</button></div>
+                    <div class="flex justify-around items-center pb-7">
+                      <h3 class="font-semibold">Total :</h3>
+                      <h3 class="font-semibold">$15200</h3>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
   </section>
+  <script src="app.js"></script>
 </body>
 </html>
