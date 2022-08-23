@@ -217,10 +217,13 @@
           </div>
         </div>
       </div>
+
+      <!-- card section end  -->
+
       <div class=" w-1/4">
         <div>
           <div class="bg-stone-100 rounded-lg ml-3" >
-            <h1 class="text-center py-5">Selected Player</h1>
+            <h1 class="text-center text-center font-semibold text-xl py-5">Selected Player</h1>
             <div class="overflow-x-auto">
               <table class="table w-full">
                  <thead class="text-center">
@@ -229,7 +232,7 @@
                     <th>Name</th>
                   </tr>
                 </thead>
-                <tbody  id="player-table" class="text-center mb-5 pb-5">
+                <tbody  id="player-table" class="text-center font-semibold  mb-5 pb-5">
                   <!-- <tr>
                     <th>1</th>
                     <td>Cy Ganderton</td>
@@ -245,27 +248,27 @@
               <div class="overflow-x-auto">
                   <div class="flex justify-around items-center pb-5">
                     <h3 class="font-semibold">Per Player</h3>
-                    <input id="player-price-field" value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered input-success max-w-xs" />
+                    <input id="player-price-field" value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered font-semibold input-success max-w-xs" />
                   </div>
                   <div class="flex justify-around items-center pb-5">
                     <h3 class="font-semibold">Player Expenses :</h3>
-                    <h3 class="font-semibold">$15200</h3>
+                    <h3 class="font-semibold">$<span id="player-rate">0</span></h3>
                   </div>
-                  <div class="text-center pb-2"><button id="player-price" class="btn btn-outline bg-green-500 text-white">Calculate</button></div>
+                  <div class="text-center pb-2"><button id="player-calculte" class="btn btn-outline bg-green-500 text-white">Calculate</button></div>
                   <div>
                     <h1 class="text-center font-semibold text-xl py-5">Others Pricing</h1>
                     <div class="flex justify-around items-center pb-5">
                       <h3 class="font-semibold">Coach</h3>
-                      <input value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered input-success max-w-xs" />
+                      <input id="coach-rate" value="" size="8" type="text" placeholder="$ Type here" class="input font-semibold  input-bordered input-success max-w-xs" />
                     </div>
                     <div class="flex justify-around items-center pb-5">
                       <h3 class="font-semibold">Manager</h3>
-                      <input value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered input-success max-w-xs" />
+                      <input id="manager-rate" value="" size="8" type="text" placeholder="$ Type here" class="input input-bordered input-success max-w-xs font-semibold " />
                     </div>
-                    <div class="text-center pb-5"><button class="btn btn-outline bg-red-500 text-white">Calculate</button></div>
+                    <div class="text-center pb-5"><button id="total-expences" class="btn btn-outline bg-red-500 text-white">Calculate</button></div>
                     <div class="flex justify-around items-center pb-7">
                       <h3 class="font-semibold">Total :</h3>
-                      <h3 class="font-semibold">$15200</h3>
+                      <h3 class="font-semibold">$<span id="final-total-cost">0</span></h3>
                     </div>
                   </div>
               </div>
@@ -274,6 +277,11 @@
       </div>
     </div>
   </section>
+
+  <!-- footer section  -->
+
+
   <script src="app.js"></script>
+  <script src="utility.js"></script>
 </body>
 </html>

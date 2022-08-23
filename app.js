@@ -1,49 +1,91 @@
- const playerList = [];
+const playerArray = []
+console.log(playerArray.length);
 
- function listItem(players){
-
-    const list = document.getElementById('player-table');
-    list.innerHTML = "";
-    for(let i = 0; i<players.length ; i++){
+function playerList(player){
+   const playerElement = document.getElementById('player-table');
+   playerElement.innerHTML = "";
+   
+    for(i = 0; i<player.length; i++){
 
         if(i < 5){
-            const name = playerList[i].playerName;
-            console.log(name);
-    
-            const tr = document.createElement('tr');
-            tr.innerHTML =`
-            <th>${[i+1]}</th>
-            <td>${name}</td>
-            `;
-            list.appendChild(tr);
+            const name = playerArray[i].name;
+
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+        <th>${i+1}</th>
+         <td>${name}</td>
+        `;
+        playerElement.appendChild(tr)
         }
-        else{
-            alert("You are not added any Player")
+        else {
+            alert("you are not added")
         }
     }
- }
 
- function selectBtn(element){
-    
-    const playerName = element.parentElement.parentElement.children[0].innerText;
-
-
-    const player = {
-        playerName: playerName,
-    }
-
-    playerList.push(player);
-
-    listItem(playerList);
-    
 }
 
-// player priceing calculation
+function selectedPlayer(element){
+    const playerSelectElement = element.parentNode.parentNode.children[0].innerText;
 
-document.getElementById('player-price').addEventListener('click', function(){
+    const playerObj = {
+        name : playerSelectElement,
+    }
+
+    playerArray.push(playerObj)
+
+
+    playerList(playerArray);
+   element.disabled = true;
+   element.style.backgroundColor  = "#787878" ;
+
+}
+
+function selectBtn(btn){
     
-    const playerPriceElement = document.getElementById('player-price-field');
-    const playerPriceElementString = playerPriceElement.value;
-    const playerPrice = parseInt(playerPriceElementString)
-    console.log(playerPrice);
+
+    selectedPlayer(btn)
+    
+
+}
+// player calculate 
+
+function playerCalculate(){
+    const playerNumber = playerArray ;
+    const totalPlayerNumber =(playerNumber.length)
+
+    
+   
+    const playerPriceFieldElement = document.getElementById('player-price-field');
+    const playerPriceFieldElementString = playerPriceFieldElement.value;
+    const playerPriceField = parseInt(playerPriceFieldElementString);
+    
+    const perPlayerRate = totalPlayerNumber * playerPriceField;
+
+    
+     const totalPlayerRate =  document.getElementById('player-rate').innerText = perPlayerRate;
+ 
+     return totalPlayerRate;
+}
+document.getElementById('player-calculte').addEventListener('click', function(){
+
+    playerCalculate()
+})
+
+// others calculate 
+document.getElementById('total-expences').addEventListener('click', function(){
+
+  const totalPlayerExpences =  playerCalculate();
+
+  const coachPriceElement = document.getElementById('coach-rate');
+  const coachPriceElementString = coachPriceElement.value;
+  const coachPrice = parseInt(coachPriceElementString);
+
+  const managerRateElement = document.getElementById('manager-rate');
+  const managerRateElementString = managerRateElement.value;
+  const managerRate = parseInt(managerRateElementString);
+
+  const totalCoachMangerRate = coachPrice + managerRate;
+  const finalPlayerCoachManagerRate = totalCoachMangerRate + totalPlayerExpences;
+  document.getElementById('final-total-cost').innerText = finalPlayerCoachManagerRate;
+  
 })
