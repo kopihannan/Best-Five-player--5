@@ -1,4 +1,4 @@
-const playerArray = []
+const playerArray = [];
 console.log(playerArray.length);
 
 function playerList(player){
@@ -18,14 +18,13 @@ function playerList(player){
         playerElement.appendChild(tr)
         }
         else {
-            alert("you are not added")
+            alert("Sorry! You are not added any Player!!!!!")
         }
     }
 
 }
 
-
-
+    // select button 
 function selectBtn(btn){
     
 
@@ -57,10 +56,10 @@ document.getElementById('player-calculte').addEventListener('click', function(){
     playerCalculate()
 })
 
-// others calculate 
+// others manager coach calculate 
 document.getElementById('total-expences').addEventListener('click', function(){
 
-  const totalPlayerExpences =  playerCalculate();
+  const totalManagerExpences =  playerCalculate();
 
   const coachPriceElement = document.getElementById('coach-rate');
   const coachPriceElementString = coachPriceElement.value;
@@ -71,7 +70,7 @@ document.getElementById('total-expences').addEventListener('click', function(){
   const managerRate = parseInt(managerRateElementString);
 
   const totalCoachMangerRate = coachPrice + managerRate;
-  const finalPlayerCoachManagerRate = totalCoachMangerRate + totalPlayerExpences;
+  const finalPlayerCoachManagerRate = totalCoachMangerRate + totalManagerExpences;
   document.getElementById('final-total-cost').innerText = finalPlayerCoachManagerRate;
   
 })
